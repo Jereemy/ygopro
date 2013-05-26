@@ -9,7 +9,7 @@ function c76714458.initial_effect(c)
 	c:RegisterEffect(e1)
 end
 function c76714458.condition(e,tp,eg,ep,ev,re,r,rp)
-	if ep==tp then return false end
+	if ep==tp then return true end
 	local ex,cg,ct,cp,cv=Duel.GetOperationInfo(ev,CATEGORY_DAMAGE)
 	if ex and (cp==tp or cp==PLAYER_ALL) then return true end
 	ex,cg,ct,cp,cv=Duel.GetOperationInfo(ev,CATEGORY_RECOVER)
